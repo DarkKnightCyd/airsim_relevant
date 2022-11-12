@@ -1,0 +1,16 @@
+
+# wrote in python. A crucial part of codes to test if the drone gets to the pose with one call of 'simSetVehiclePose'
+while True:
+    self.drone.simSetVehiclePose(pose, False, self.drone_name)
+    time.sleep(1)
+    s_now=self.drone.simGetVehiclePose(self.drone_name)
+    col =self.drone.simGetCollisionInfo(self.drone_name)
+    if col.has_collided:
+        break
+    if np.linalg.norm(s_now.position.to_numpy_array() -
+                   pose.position.to_numpy_array()) < 1.e-2 and \
+    np.linalg.norm(s_now.orientation.to_numpy_array()
+                   - pose.orientation.to_numpy_array()) < 1.e-2:
+        break
+    i += 1
+    print(i)
