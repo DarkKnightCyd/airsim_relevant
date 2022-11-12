@@ -1,0 +1,62 @@
+{
+  	"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/master/docs/settings.md",
+  	"SettingsVersion": 1.2,
+  	"SimMode": "Multirotor",
+	"PhysicsEngineName": "ExternalPhysicsEngine",
+  	"ClockSpeed":1,
+	     "Vehicles": {
+		"Drone1": {
+		    "VehicleType": "simpleflight",
+		 
+		    "AutoCreate": true,
+		    "Sensors": {
+		        "LidarSensor1": {
+		            "SensorType": 6,
+		            "Enabled" : true,
+		            "Range":3,
+		            "NumberOfChannels": 72,
+		            "RotationsPerSecond": 80,
+		            "PointsPerSecond": 100000,
+		            "X": 0, "Y": 0, "Z": -1,
+		            "Roll": 0, "Pitch": 0, "Yaw" : 0,
+		            "VerticalFOVUpper": 50,
+		            "VerticalFOVLower": -55,
+		            "HorizontalFOVStart": -20,
+		            "HorizontalFOVEnd": 20,
+		            "DrawDebugPoints": false,
+		            "DataFrame": "VehicleInertialFrame"
+		        }
+		       
+		        
+		    },
+            "Cameras" : {
+                "my_dep1": {
+                    "CaptureSettings" : [
+                        {
+                            "ImageType" : 2,
+                            "Width" : 1280,
+                            "Height" : 720
+                            	
+                        }
+                    ],
+                    "X": 0.3, "Y": 0.0, "Z": -0.30,
+                    "Pitch": 0.0, "Roll": 0.0, "Yaw": 0.0
+                },
+                "my_dep2": {
+                    "CaptureSettings" : [
+                        {
+                            "ImageType" : 1,
+                            "Width" : 256,
+                            "Height" : 144
+                            	
+                        }
+                    ],
+                    "X": 0.3, "Y": 0.0, "Z": -0.30,
+                    "Pitch": 0.0, "Roll": 0.0, "Yaw": 0.0
+                	}
+        		}
+    
+    		}
+    
+	}
+}
